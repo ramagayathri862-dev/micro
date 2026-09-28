@@ -1,0 +1,15 @@
+# Runs the real Hindsight memory server, using your Groq key for fact extraction.
+services:
+  hindsight:
+    image: ghcr.io/vectorize-io/hindsight:latest
+    ports:
+      - "8888:8888"   # API
+      - "9999:9999"   # Hindsight's own UI
+    environment:
+      HINDSIGHT_API_LLM_PROVIDER: groq
+      HINDSIGHT_API_LLM_API_KEY: ${GROQ_API_KEY}
+      HINDSIGHT_API_LLM_MODEL: llama-3.3-70b-versatile
+    volumes:
+      - hindsight-data:/home/hindsight/.pg0
+volumes:
+  hindsight-data:
