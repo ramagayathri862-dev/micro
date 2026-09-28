@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SupportMind AI</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="brand"><span class="dot"></span> SupportMind AI</div>
+
+      <div class="nav-item" data-page="dashboard"><span class="ic">🏠</span> Dashboard</div>
+      <div class="nav-item" data-page="customers"><span class="ic">👥</span> Customers</div>
+      <div class="nav-item" data-page="tickets"><span class="ic">🎫</span> Tickets</div>
+      <div class="nav-item" data-page="create-ticket"><span class="ic">➕</span> Create Ticket</div>
+      <div class="nav-item" data-page="ai-support"><span class="ic">🤖</span> AI Support</div>
+      <div class="nav-item" data-page="memory"><span class="ic">🧠</span> Memory</div>
+      <div class="nav-item" data-page="memory-search"><span class="ic">🔎</span> Memory Search</div>
+      <div class="nav-item" data-page="knowledge"><span class="ic">📚</span> Knowledge</div>
+      <div class="nav-item" data-page="analytics"><span class="ic">📊</span> Analytics</div>
+      <div class="nav-item" data-page="settings"><span class="ic">⚙️</span> Settings</div>
+
+      <div class="sidebar-footer">
+        SupportMind AI · Demo Build<br/>
+        Memory engine: Hindsight<br/>
+        <span id="backend-badge">⚪ Checking backend…</span>
+      </div>
+    </aside>
+
+    <main class="main" id="main"></main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="backend.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
